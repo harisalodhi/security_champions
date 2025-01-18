@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Firewall</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        h1 {
+            color: white; /* Updated to white */
+        }
+        nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        h2, h3 {
+            color: #007BFF;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            background: #333;
+            color: white;
+            padding: 5px 10px; /* Reduced padding to make it less thick */
+        }
+    </style>
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Building the Human Firewall</h1>
+        <p>Empowering individuals with security best practices to safeguard the organisation</p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('slide1')">Why Cybersecurity Matters</a>
+        <a href="#" onclick="showSection('slide2')">The Human Element</a>
+        <a href="#" onclick="showSection('slide3')">Threats and Vulnerabilities</a>
+        <a href="#" onclick="showSection('slide4')">Best Practices</a>
+        <a href="#" onclick="showSection('slide5')">Secure Coding</a>
+        <a href="#" onclick="showSection('slide6')">Security Champions</a>
+    </nav>
+
+    <section id="slide1" class="active">
+        <h2>Why Cybersecurity Matters</h2>
+        <p><strong>Increasing threats and cyberattacks</strong> </p>
+        <ul>
+            <li>Cyberattacks are becoming more sophisticated, complex, and frequent.</li>
+        </ul>
+        <p><strong>Cost of cybersecurity breach:</strong> </p>
+        <ul>
+            <li><strong>Financial impact:</strong> The average cost of a data breach is around $4.88 million in 2024 (according to IBM Data Breach Report), a 10% increase from the year before.</li>
+            <li><strong>Human impact:</strong> Exposure of private and sensitive data, damage to reputation and loss of customer trust</li>
+        </ul>
+        <p><strong>Human error</strong> </p>
+        <ul>
+            <li>Contributes to 95% of all breaches (IBM Cyber Security Intelligence Index Report).</li>
+        </ul>
+        <p><strong>Role of Security Champions</strong></p>
+        <ul>
+            <li>Security Champions act as role models, spreading awareness and implementing key changes</li>
+        </ul>
+    </section>
+
+    <section id="slide2">
+        <h2>The Human Element</h2>
+        <ul>
+            <li>Weak or reused passwords</li>
+            <li>Unsecured devices and networks</li>
+            <li>Neglecting software updates</li>
+            <li><strong>Phishing emails:</strong> Fraudulent emails designed to trick users.</li>
+            <li><strong>Social engineering:</strong> Manipulating people into divulging confidential information.</li>
+        </ul>
+    </section>
+
+    <section id="slide3">
+        <h2>Recognising Threats and Vulnerabilities</h2>
+        <p><strong>Phishing Attacks</strong></p>
+        <p>Red Flags:</p>
+        <ul>
+            <li>Unusual sender address(e.g., “[email protected]” instead of a legitimate domain)</li>
+            <li>Unexpected links or attachments</li>
+            <li>Generic greetings like "Dear User" instead of personalized names</li>
+        </ul>
+        <p>What to do:</p>
+        <ul>
+            <li>Verify sender details</li>
+            <li>Report suspicious emails</li>
+            <li>Access linked sites from the web instead of the email hyperlink</li>
+        </ul>
+
+        <p><strong>Malware Delivery</strong></p>
+        <p>Red Flags:</p>
+        <ul>
+            <li>Unexpected file attachments</li>
+            <li>Pop-ups urging downloads</li>
+            <li>Slow device performance after opening unknown file</li>
+        </ul>
+        <p>What to do:</p>
+        <ul>
+            <li>Avoid opening attachments or files from unknown sources</li>
+            <li>Use antivirus software to scan downloads</li>
+        </ul>
+    
+        <p><strong>Social Engineering</strong></p>
+        <p>Red Flags:</p>
+        <ul>
+            <li>Unexpected calls or messages claiming to be from authority figures (e.g., CEO or IT support)</li>
+            <li>Requests for sensitive data like passwords or financial details</li>
+            <li>Appeals to emotions like fear (e.g., threats of account deactivation) or urgency</li>
+        </ul>
+        <p>What to do:</p>
+        <ul>
+            <li>Verify the identity of the requester</li>
+            <li>Avoid sharing information over the phone or email</li>
+        </ul>
+    </section>
+
+    <section id="slide4">
+        <h2>Best Practices for a Secure Culture</h2>
+        <p><strong>Use strong and unique passwords</strong></p>
+        <ul>
+            <li>Create passwords with a mix of uppercase, lowercase, numbers, and symbols (e.g., P@ssw0rd!23)</li>
+            <li>Use a password manager to generate and store complex passwords securely</li>
+        </ul>
+
+        <p><strong>Enable Multi-Factor Authentication (MFA)</strong></p>
+        <ul>
+            <li>Use MFA wherever possible (e.g., work accounts, email, and banking)</li>
+            <li>Choose apps like Google Authenticator or Microsoft Authenticator instead of SMS-based MFA for better security</li>
+        </ul>
+
+        <p><strong>Verify links and attachments before opening</strong></p>
+        <ul>
+            <li>Be cautious of unexpected attachments, even if they appear to come from a known contact</li>
+            <li>Access linked sites from the web instead of the email hyperlink</li>
+        </ul>
+
+        <p><strong>Practice secure device handling</strong></p>
+        <ul>
+            <li>Lock your screen when stepping away from your workstation</li>
+            <li>Avoid connecting to public Wi-Fi without a secure VPN</li>
+        </ul>
+
+        <p><strong>Report incidents immediately</strong></p>
+        <ul>
+            <li>Report suspicious emails, calls, or activities to the IT security team promptly</li>
+            <li>Encourage a “no-blame” culture to ensure employees feel comfortable reporting</li>
+        </ul>
+    </section>
+
+    <section id="slide5">
+        <h2>Secure Coding Practices</h2>
+        <p><strong>Input validation</strong></p>
+        <ul>
+            <li>Validate all user inputs including URLs and file uploads</li>
+            <li>Use whitelisting over blacklisting</li>
+        </ul>
+
+        <p><strong>Authentication and authorisation</strong></p>
+        <ul>
+            <li>Ensure only authorised users can access specific resources</li>
+            <li>Use Role Based Access Control (RBAC) to restrict user permissions</li>
+            <li>Avoid hardcoding credentials, use environment variables or secret managers</li>
+        </ul>
+
+        <p><strong>Data encryption</strong></p>
+        <ul>
+            <li>Protect data at rest or in transit</li>
+            <li>Use HTTPS for secure communications</li>
+            <li>Encrypt sensitive data using industry standards like RSA</li>
+        </ul>
+
+        <p><strong>Dependency management</strong></p>
+        <ul>
+            <li>Vulnerable third-party libraries can be exploited</li>
+            <li>Regularly update and patch dependencies</li>
+            <li>Use tools like 'OWASP Dependency Check' to identify vulnerabilities</li>
+            <li>Remove unused or unnecessary dependencies</li>
+        </ul>
+
+        <p><strong>Secure Development Lifecycle (SDLC)</strong></p>
+        <ul>
+            <li>Conduct regular security code reviews</li>
+            <li>Perform static and dynamic application security testing</li>
+            <li>Integrate security checks in CI/CD pipeline</li>
+        </ul>
+    </section>
+
+    <section id="slide6">
+        <h2>How Security Champions Can Make a Difference</h2>
+        <ul>
+            <li>Raising awareness</li>
+            <li>Promoting best practices</li>
+            <li>Acting as first responders</li>
+            <li>Fostering a security-first culture</li>
+            <li>Bridging the gap between the security department and the organisation</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p></p>
+        <p style="margin-left: auto;">by Haris Lodhi</p>
+    </footer>
+</body>
+</html>
